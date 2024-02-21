@@ -1,6 +1,6 @@
 //
 //  main.cpp
-//  LinearEquations
+//  Gaussian Elimination
 //
 //  Created by Behrouz on 10/6/15.
 //  Copyright (c) 2015 Behrouz. All rights reserved.
@@ -29,7 +29,7 @@ void printMatrix(const vector<vector<double>>& A) {
 }
 
 // Function to perform Gaussian elimination and solve the system of equations
-vector<double> gaussElimination(vector<vector<double>> A) {
+vector<double> gaussianElimination(vector<vector<double>> A) {
     int n = (int)A.size(); // Number of rows (and variables)
 
     // Forward elimination to form an upper triangular matrix
@@ -97,7 +97,7 @@ int main() {
     printMatrix(A);
 
     // Perform Gaussian elimination and print the solution
-    vector<double> solution = gaussElimination(A);
+    vector<double> solution = gaussianElimination(A);
     cout << "Solution:\n";
     for (int i = 0; i < n; ++i) {
         cout << "Variable " << i + 1 << ": " << solution[i] << "\n";
@@ -105,4 +105,3 @@ int main() {
 
     return 0;
 }
-
